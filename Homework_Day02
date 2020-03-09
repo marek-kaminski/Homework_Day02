@@ -1,0 +1,135 @@
+'''''''''
+Zadania domowe z lekcji 02
+*****************************************************************************
+# Zadanie 01 i 02    program który zamienia temperaturę z farenheita na celsjusza i na odwrót
+start = input("Jaką temperaturę chcesz podać? Stopnie Farenheita  czy celsjusza? (F/C)")
+
+if start == "F":
+    input_temperature = input("Podaj temperaturę")
+    input_temperature_float = float(input_temperature)
+    temperature = (5 / 9) * (input_temperature_float - 32)
+    end = ("To będzie dokładnie ")
+    stopnie = (" stopni Celsjusza")
+    print(end, temperature, stopnie)
+elif start == "C":
+    input_temperature = input("Podaj temperaturę")
+    input_temperature_float = float(input_temperature)
+    temperature = (9 / 5) * (input_temperature_float ) + 32
+    end = ("To będzie dokładnie ")
+    stopnie = (" stopni Farenheita")
+    print(end, temperature, stopnie)
+else:
+    print("Niestety musisz podać  Celsjusza albo Farenhiety")
+*******************************************************************
+# Zadanie 03   obliczanie pola powierzchni koła przy podaniu promienia
+
+R = input("Podaj promień koła")
+R_float = float(R)
+Pi = 3.14
+Pole = Pi * (R_float **2)
+print ("pole koła to ", Pole)
+*******************************************************************
+
+# Zadanie 04  Program który podaje pierwszą i ostatnią liczbę podanej cyfry
+number = input("Podaje cyfre")
+print ("Pierwsza liczba to ", number[0], " a ostatnia to ", number[-1])
+*******************************************************************
+
+# Zadanie 05    Program który rysuje prostokąt,( trzeba było zastosować While)
+#
+height = input("Podaj jaka ma być wysokość prostokąta")
+depth = input("Podaj jaka ma być szerokość prostokąta")
+height_int = int(height)
+depth_int = int(depth)
+depth_up = "-"*depth_int
+middle = " "*depth_int
+height_front ="|"*height_int
+
+print('+',depth_up,"+")
+while height_int > 0:
+    height_int = height_int-1
+    print('|',middle,"|")
+else:
+    print('+',depth_up,"+")
+*******************************************************************
+# Zadanie 06   Program który zamienia liczbę z systemu binarnego na dziesiętny
+
+binary = input("Proszę podaj liczbę w systemie binarnym")
+
+num1 = binary[-1]
+num2 = binary[-2]
+num3 = binary[-3]
+num4 = binary[-4]
+num5 = binary[-5]
+num6 = binary[-6]
+digit_number = 0
+
+if num1 == "1":
+    digit_number = digit_number + (1 * 2**0)
+if num2 == "1":
+    digit_number += (1 * 2**1)
+if num3 == "1":
+    digit_number += (1 * 2**2)
+if num4 == "1":
+    digit_number += (1 * 2**3)
+if num5 == "1":
+    digit_number += (1 * 2**4)
+if num6 == "1":
+    digit_number = digit_number + (1 * 2**5)
+
+print(digit_number)
+*******************************************************************
+# Zadanie 07 program do rozpoznawania czy dana liczba jest parzysta czy nie.
+
+number = input("Podaj liczbę")
+number_float = float(number)
+test = number_float % 2
+print(test)
+
+if test > 0:
+    print("Twoja liczba jest nieparzysta")
+else:
+    print("Twoja liczba jest parzysta")
+*******************************************************************
+# Zadanie 08  Program do rozpoznawania czy liczba jest podzielna przez 3 lub 5 lub 7
+number = input("Podaj liczbę")
+number_float = float(number)
+test_3 = number_float % 3
+test_5 = number_float % 5
+test_7 = number_float % 7
+
+if test_3 == 0:
+    print("Twoja liczba jest podzielna przez 3")
+elif test_5 == 0:
+    print("Twoja liczba jest podzielna przez 5")
+elif test_7 == 0:
+    print("Twoja liczba jest podzielna przez 7")
+else:
+    print(" Twoja liczba nie jest podzielna ani przez 3, ani 5 ani przez 7.")
+
+********************************************************************
+# Zadanie 09   Program, który rozpoznaje czy liczba jest podzielna przez 3, 5 oraz 7
+number = input("Podaj liczbę")
+number_float = float(number)
+test_3 = number_float % 3
+test_5 = number_float % 5
+test_7 = number_float % 7
+
+if test_3 + test_5 + test_7 == 0:
+    print ("Twoja liczba jest podzielna przez 3, 5 oraz 7")
+else:
+    print("Twoja liczba niestety nie jeste podzielna przez 3, 5 oraz 7")
+********************************************************************
+# Zadanie 10   Program który sprawdza czy dany rok jest rokiem przestępnym
+
+year = input("Podaj rok, który chcesz sprawdzić")
+year_float = float(year)
+
+if year_float%4 == 0 and year_float%100 != 0:
+    print("Ten rok  jest rokiem przestępnym")
+elif year_float%400 == 0:
+    print("Ten rok jest rokiem przestępnym")
+else:
+    print("Ten rok nie jest rokiem przestępnym")
+********************************************************************
+'''''''''
