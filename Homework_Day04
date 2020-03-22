@@ -1,5 +1,7 @@
 
-# Zadanie 1   przepisanie dotychczasowych proagramów z pierwszego zadania domowego z wykorzystaniem definiowania własnych funkcji i wytycznych powyżej
+
+# Zadanie 1   przepisanie dotychczasowych proagramów z pierwszego zadania domowego z wykorzystaniem definiowania
+# własnych funkcji i wytycznych powyżej
 
 
 def hw_conversion_temperature():
@@ -137,46 +139,30 @@ def check_for_leap_year():
 
 # list_input = input("Proszę podać listę:")
 
-
 def drawing_list():
-    przykładowa_lista = ["to", "przykładowa", "lista"]
-    counter_list = 0
-    list_lenght = len(przykładowa_lista)
-    while list_lenght > 0 :
-        print("+" + "-" + "-" * len(przykładowa_lista[counter_list])+"+", )
-        print("|" + przykładowa_lista[counter_list] + " |", )
-        print("+" + "-" + "-" * len(przykładowa_lista[counter_list]) + "+", )
-        counter_list += 1
-        list_lenght += -1
-        if counter_list >= 30:
-            print ("...")
+    example_list = ["to", "przykładowa", "lista", "miłego", "dnia", ":)"]
 
-def drawing_list4():
-    przykładowa_lista = ["to", "przykładowa", "lista"]
+    def drawing_first_line():
+        counter_list1 = 0
+        list_lenght1 = len(example_list)
+        while list_lenght1 > 0:
+            print("+" + "-" + "-" * len(example_list[counter_list1]), end="")
+
+            list_lenght1 += -1
+            counter_list1 += 1
+        print("+")
+
+    drawing_first_line()
     counter_list = 0
-    list_lenght = len(przykładowa_lista)
+    list_lenght = len(example_list)
+    internal_counter = 0
+    print("|", end="")
     while list_lenght > 0:
-        internal1 = list_lenght
-        while internal1 > 0:
-            print("+" + "-" + "-" * len(przykładowa_lista[counter_list])+"+", end="" )
-            internal1 += -1
-        print("")
-        internal2 = list_lenght
-        while internal2 > 0:
-            print("|" + przykładowa_lista[counter_list] + " |", end="")
-            internal2 += -1
-        print("")
-        internal3 = list_lenght
-        while internal3 > 0:
-            print("+" + "-" + "-" * len(przykładowa_lista[counter_list])+"+", end="" )
-            internal3 += -1
-        print("")
-
-        counter_list += 1
+        print(example_list[internal_counter] + " |", end="")
+        internal_counter += 1
         list_lenght += -1
-
-
-print(drawing_list())
+    print(" ")
+    drawing_first_line()
 
 
 # Zadanie 3 Program przyjmuje kwotę w parametrze i wylicza jak rozmienić to na monety: 5, 2, 1, 0.5, 0.2, 0.1
@@ -250,11 +236,11 @@ def doc_calculator():
     else:
         human_years = (2*10.5) + (dog_age - 2) * 4
     print("Twój piesek ma " + str(human_years) + " lat. :)")
-
 # print(doc_calculator())
 
 
 # Zadanie 6 Jest w innym pliku i będzie na bierząco aktualizowane o nowe programy
+
 
 
 
