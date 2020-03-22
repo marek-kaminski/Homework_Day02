@@ -20,7 +20,7 @@
    Twój wybór: _
 """""""""
 
-interface = input("Witaj w multitoolu zrobionym w pythonie. \n"
+interface = float(input("Witaj w multitoolu zrobionym w pythonie. \n"
                   "Tutaj masz do wyboru wszystkie programy dotejpory zrobione.\n"
                   "Podaj który program chcesz wybrać:\n"
                   "1) Zamina temperatury z C na F i na odwrót.\n"
@@ -32,15 +32,16 @@ interface = input("Witaj w multitoolu zrobionym w pythonie. \n"
                   "7) Sprawdzanie dzielności przez 3, 5 lub 7\n"
                   "8) Sprawdzanie dzielności przez 3 i 5 i 7\n"
                   "9) Szukanie roku przestępnego\n"
-                  "10) Rysowanie tabeli do podanej listy jeszcze nie gotowe\n"
+                  "10) Rysowanie tabeli do  listy \n"
                   "11) Wydawanie reszty\n"
                   "12) Rysowanie piramidy\n"
                   "13) Kalkulator psiego wieku\n"
                   "14) Losowy program, jeszcze nie dizała\n"
-                  "Podaj liczbę: ")
+                  "Podaj liczbę: "))
 
 
-# Zadanie 1   przepisanie dotychczasowych proagramów z pierwszego zadania domowego z wykorzystaniem definiowania własnych funkcji i wytycznych powyżej
+# Zadanie 1   przepisanie dotychczasowych proagramów z pierwszego zadania domowego z wykorzystaniem
+# definiowania własnych funkcji i wytycznych powyżej
 
 
 def hw_conversion_temperature():
@@ -177,48 +178,30 @@ def check_for_leap_year():
 
 
 # list_input = input("Proszę podać listę:")
-
-
 def drawing_list():
-    przykładowa_lista = ["to", "przykładowa", "lista"]
-    counter_list = 0
-    list_lenght = len(przykładowa_lista)
-    while list_lenght > 0 :
-        print("+" + "-" + "-" * len(przykładowa_lista[counter_list])+"+", )
-        print("|" + przykładowa_lista[counter_list] + " |", )
-        print("+" + "-" + "-" * len(przykładowa_lista[counter_list]) + "+", )
-        counter_list += 1
-        list_lenght += -1
-        if counter_list >= 30:
-            print ("...")
+    example_list = ["to", "przykładowa", "lista", "miłego", "dnia", ":)"]
 
+    def drawing_first_line():
+        counter_list1 = 0
+        list_lenght1 = len(example_list)
+        while list_lenght1 > 0:
+            print("+" + "-" + "-" * len(example_list[counter_list1]), end="")
 
-def drawing_list4():
-    przykładowa_lista = ["to", "przykładowa", "lista"]
+            list_lenght1 += -1
+            counter_list1 += 1
+        print("+")
+
+    drawing_first_line()
     counter_list = 0
-    list_lenght = len(przykładowa_lista)
+    list_lenght = len(example_list)
+    internal_counter = 0
+    print("|", end="")
     while list_lenght > 0:
-        internal1 = list_lenght
-        while internal1 > 0:
-            print("+" + "-" + "-" * len(przykładowa_lista[counter_list])+"+", end="" )
-            internal1 += -1
-        print("")
-        internal2 = list_lenght
-        while internal2 > 0:
-            print("|" + przykładowa_lista[counter_list] + " |", end="")
-            internal2 += -1
-        print("")
-        internal3 = list_lenght
-        while internal3 > 0:
-            print("+" + "-" + "-" * len(przykładowa_lista[counter_list])+"+", end="" )
-            internal3 += -1
-        print("")
-
-        counter_list += 1
+        print(example_list[internal_counter] + " |", end="")
+        internal_counter += 1
         list_lenght += -1
-
-
-# print(drawing_list())
+    print(" ")
+    drawing_first_line()
 
 
 # Zadanie 3 Program przyjmuje kwotę w parametrze i wylicza jak rozmienić to na monety: 5, 2, 1, 0.5, 0.2, 0.1
@@ -295,8 +278,6 @@ def dog_calculator():
 # print(dog_calculator())
 
 
-# Zadanie 6 Jest w innym pliku i będzie na bierząco aktualizowane o nowe programy
-
 if interface == 1:
     print(hw_conversion_temperature())
 if interface == 2:
@@ -316,7 +297,7 @@ if interface == 8:
 if interface == 9:
     print(check_for_leap_year())
 if interface == 10:
-    print("Ten program jeszcze nie działa ")
+    print(drawing_list())
 if interface == 11:
     print(counting_money())
 if interface == 12:
@@ -327,3 +308,5 @@ if interface == 14:
     print("Ten program jest jeszcze nie gotowy")
 else:
     print ("wybierz normalny numerek z listy")
+
+
